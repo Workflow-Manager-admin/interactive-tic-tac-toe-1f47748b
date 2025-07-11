@@ -155,7 +155,10 @@ function App() {
 
         {/* Turn Indicator */}
         {!gameStatus.over && (
-          <div className="ttt-turn-indicator" style={{ color: COLORS.accent }}>
+          <div
+            className="ttt-turn-indicator"
+            style={{ color: "#8f2d55", textAlign: "left" }}
+          >
             Player {xIsNext ? "X" : "O"}'s turn
           </div>
         )}

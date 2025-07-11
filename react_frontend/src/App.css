@@ -47,6 +47,8 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  text-align: left;
+  background-color: #eac3c3;
 }
 
 .ttt-scoreboard {
