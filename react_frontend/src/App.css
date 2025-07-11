@@ -29,6 +29,140 @@
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
+/* --- Tic Tac Toe Modern Minimal Styles --- */
+.tic-tac-toe-app-bg {
+  min-height: 100vh;
+  background: var(--bg-primary, #fff);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ttt-centered-layout {
+  width: 100vw;
+  max-width: 370px;
+  min-height: 100vh;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.ttt-scoreboard {
+  display: flex;
+  justify-content: space-between;
+  width: 220px;
+  margin-bottom: 0.6em;
+  font-size: 1.17rem;
+  font-weight: 600;
+  gap: 2.8em;
+  letter-spacing: 1px;
+}
+
+.ttt-score span {
+  margin-left: 0.4em;
+  font-weight: 700;
+  font-size: 1.18em;
+}
+
+.ttt-turn-indicator {
+  margin-bottom: 1em;
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+.ttt-board {
+  display: flex;
+  flex-direction: column;
+  gap: 0.1em;
+  box-shadow: 0 2px 32px rgba(30,42,54,0.03);
+  background: var(--bg-secondary, #f8f9fa);
+  border-radius: 13px;
+  padding: 20px 15px 18px 15px;
+  margin-bottom: 1.4em;
+}
+
+.ttt-board-row {
+  display: flex;
+  gap: 0.1em;
+  width: 210px;
+  justify-content: center;
+}
+
+.ttt-square {
+  width: 60px;
+  height: 60px;
+  background: transparent;
+  border: 2.2px solid #424242;
+  font-size: 2.1rem;
+  font-weight: 700;
+  border-radius: 12px;
+  margin: 0.1em;
+  cursor: pointer;
+  outline: none;
+  box-shadow: 0 0.4px 3px rgba(34,50,70,0.03);
+  transition: background .18s, color .18s;
+  user-select: none;
+  position: relative;
+}
+.ttt-square:focus, .ttt-square:hover {
+  background: #fffde7;
+  border-color: #fbc02d;
+  z-index: 1;
+}
+.ttt-square[aria-label="Empty cell"] {
+  color: #b0bec5;
+}
+
+.ttt-notification {
+  margin: 18px 0 14px 0;
+  padding: 12px 24px;
+  border-radius: 9px;
+  font-weight: 600;
+  letter-spacing: 0.6px;
+  background: #fff9e1;
+  border: none;
+  min-width: 170px;
+  font-size: 1rem;
+}
+
+.ttt-reset-btn {
+  display: block;
+  margin: 2px auto 0 auto;
+  padding: 12px 28px;
+  font-size: 1rem;
+  border-radius: 9px;
+  font-weight: 600;
+  border: 2px solid #424242;
+  cursor: pointer;
+  box-shadow: 0 1px 7px rgba(251,192,45,0.06);
+  transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+}
+.ttt-reset-btn:hover, .ttt-reset-btn:focus {
+  background: #ffc81c;
+  color: #212121;
+  border-color: #fbc02d;
+}
+
+@media (max-width: 500px) {
+  .ttt-centered-layout {
+    max-width: 98vw;
+    padding: 0 3vw;
+  }
+  .ttt-board-row {
+    width: 92vw;
+    min-width: 220px;
+  }
+  .ttt-board {
+    padding: 10px 2vw 11px 2vw;
+  }
+  .ttt-scoreboard {
+    width: 150px;
+    gap: 1em;
+  }
+}
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;
